@@ -30,7 +30,7 @@ _by Ziqian Pan_
 
 * you can get the URL from GitHub in the new repository that you just made, copy and paste the **SSH URL** over and put it in the URL section of the syntax.
 
-After you setup your remote you are one step closer to make your first push. But first you have to setup where you are going to push to, and to do this you use```git push -u origin master``` since you named your remote connetion "origin" you are seting up so  that everytime you want to "```git push```" it will automatically push to the orgin (GitHub). Now you can ```git push``` freely, your setups are done
+After you setup your remote you are one step closer to make your first push. But first you have to setup where you are going to push to, and to do this you use```git push -u origin master``` since you named your remote connetion "origin" you are seting up so  that everytime you want to "```git push```" it will automatically push to the orgin (GitHub). Now you can ```git push``` freely, your setups are done.
 
 
 ---
@@ -38,8 +38,16 @@ After you setup your remote you are one step closer to make your first push. But
 Normal workflow is 
 
 1. you make/edit some code/files
-2. use ```git status``` to check all recent modify files (use when you are not sure which file is on the stage)
-3. use ```git add <file name>``` put the file on the stage to be commited
-4. use ```git commit -m <"some info for this commit">``` takes a snapshot of your currnet code
+2. use ```git status``` (use when you are not sure which file is on the stage or to check) all recent modify files
+3. use ```git add <file name>``` put the file you named on the stage to be commited
+4. use ```git commit -m <"some info for this commit">```(commit all files you have on the stage) takes a snapshot of your code in all those files that is on the stage
 5. lasty use ```git push``` to push all your new changes to GitHub where now everyone can see
 6. repeat steps 1 -5
+
+ 
+##Error handing
+If you use ```git init``` in the wrong repository you have to go back one file so you can delet a file call <.git>. 
+
+You would type ```rm -rf .git``` once the file is deleted you should be fine.
+
+The reason we had "-rf" is that it will allow you to force remove a file, since .git is invisible and we can't see it, we have to force remove it. 
