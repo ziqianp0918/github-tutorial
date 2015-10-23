@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="GitHub Tutorial : finished project">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>GitHub Tutorial</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/ziqianp0918/github-tutorial">View on GitHub</a>
+
+          <h1 id="project_title">GitHub Tutorial</h1>
+          <h2 id="project_tagline">finished project</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/ziqianp0918/github-tutorial/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/ziqianp0918/github-tutorial/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="github-tutorial" class="anchor" href="#github-tutorial" aria-hidden="true"><span class="octicon octicon-link"></span></a>GitHub Tutorial</h1>
+
+<p><em>by Ziqian Pan</em></p>
+
+<hr>
+
+<h2>
+<a id="git-vs-github" class="anchor" href="#git-vs-github" aria-hidden="true"><span class="octicon octicon-link"></span></a>Git vs. GitHub</h2>
+
+<p><strong>Git</strong> is version control : that keeps snapshots of code, so if you need, you can look back at the previous version of your code and see what you did. You use use <code>git init</code> to start using Git's features on your local machine.</p>
+
+<p><strong>GitHub</strong> is a place where you store your code in the cloud and can colaborate with other coders really easiy by posting your code up in Github. You can make new repository that would connet to your local machine so you can push and pull any changes you have on the cloud.</p>
+
+<p><strong>difference</strong> Github is like the website and it can't run without Git, while Git can run on its own without GitHub and you use <code>git init</code> to start git in your currnet repository so you can start adding and commiting files.</p>
+
+<hr>
+
+<h2>
+<a id="initial-setup" class="anchor" href="#initial-setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Initial Setup</h2>
+
+<p><strong>GitHub account</strong> is needed before you can start using GitHub's features once you make the account then you can start making a repository and remotes to connet your local machine to your cloud. You can sign up for an account at <a href="https://github.com">GitHub</a>.  </p>
+
+<p><strong>SSH key</strong> is a very secure password that you can use to connet to two clients together so you can login safely. You have to go to your GitHub settings and within the settings you can find the SSH keys then you can click on add a SSH key and don't forget a title for the key as well. After that go back to the other client you are using (ex:Nitrous or c9) and find the SSH key on that client and copy and paste into GitHub now the two client that you are using is conneted.  </p>
+
+<p><strong>Git config  (user.name &amp; user.email)</strong> <code>git config user.name(name)</code> are use to set up your name and <code>git config user.email(email)</code> is to set up your email address when you are using this repository and commiting it would send you a email and refer to you by your user.name. </p>
+
+<hr>
+
+<h2>
+<a id="repository-setup" class="anchor" href="#repository-setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Repository Setup</h2>
+
+<p><strong>Git init</strong> is a code that will set up your repository so it can use all funtion of Git (<strong>always remember to check where you are before using <code>git init</code> you have to be in the repository</strong>) <em>so you don't enable git in the wrong repository.</em> When you want to enable git funtion in the repository you just type <code>git init</code> in the console of the repository that you want to enable <strong>Git</strong> in.</p>
+
+<p><strong>First add and commit</strong>, this will be the first time you ever in this fresh repository and you use <code>git add &lt;file name&gt;</code> to add and you use <code>git commit -m &lt;message you want to see for this commit&gt;</code> to take a snapshot of your code so it would be in your revision history.</p>
+
+<p><strong>New repository</strong> can be made on GitHub, you have to first login to your github account then look to the top right where you will see a plus buttom. Click on that then click on Create new repository, then pick a Repository name(make sure it is the same as the repository you have on the other client(c9/Nitrous)) then click on Create repository. </p>
+
+<p><strong>remote</strong> is a bridge you can setup so that you have a connetion between the two clients. You can do this by using the code &lt; <code>git remote add origin URL</code>&gt;  </p>
+
+<ul>
+<li>you can get the URL from GitHub in the new repository that you just made, copy and paste the <strong>SSH URL</strong> over and put it in the URL section of the syntax.</li>
+</ul>
+
+<p>After you setup your remote you are one step closer to make your first push. But first you have to setup where you are going to push to, and to do this you use<code>git push -u origin master</code> since you named your remote connetion "origin" you are seting up so  that everytime you want to "<code>git push</code>" it will automatically push to the orgin (GitHub). Now you can <code>git push</code> freely, your setups are done.</p>
+
+<hr>
+
+<h2>
+<a id="workflow--commands" class="anchor" href="#workflow--commands" aria-hidden="true"><span class="octicon octicon-link"></span></a>Workflow &amp; Commands</h2>
+
+<p>Normal workflow is </p>
+
+<ol>
+<li>you make/edit some code/files</li>
+<li>use <code>git status</code> (use when you are not sure which file is on the stage or to check) all recent modify files</li>
+<li>use <code>git add &lt;file name&gt;</code> put the file you named on the stage to be commited</li>
+<li>use <code>git commit -m &lt;"some info for this commit"&gt;</code>(commit all files you have on the stage) takes a snapshot of your code in all those files that is on the stage</li>
+<li>lasty use <code>git push</code> to push all your new changes to GitHub where now everyone can see</li>
+<li>repeat steps 1 -5</li>
+</ol>
+
+<h2>
+<a id="error-handing" class="anchor" href="#error-handing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Error handing</h2>
+
+<p>If you use <code>git init</code> in the wrong repository you have to go back one file so you can delet a file call &lt;.git&gt;. </p>
+
+<p>You would type <code>rm -rf .git</code> once the file is deleted you should be fine.</p>
+
+<p>The reason we had "-rf" is that it will allow you to force remove a file, since .git is invisible and we can't see it, we have to force remove it. </p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">GitHub Tutorial maintained by <a href="https://github.com/ziqianp0918">ziqianp0918</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
